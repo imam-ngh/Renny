@@ -11,10 +11,7 @@
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
-      /* Removed background-image with text */
-      /* background-image: url('https://placehold.co/1920x1080/png?text=Pastel+Blue+White+Pattern&font=Pacifico&bg=e0f0ff&fg=ffffff'); */
-      background-repeat: no-repeat;
+      background: url('../Gambar/bg.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
       overflow-x: hidden;
@@ -46,6 +43,20 @@
       pointer-events: none;
       border-radius: 50%;
     }
++   /* Additional star background overlay */
++   body::before {
++     background-image:
++       radial-gradient(2px 2px at 10px 20px, #fff, transparent),
++       radial-gradient(2px 2px at 50px 80px, #fff, transparent),
++       radial-gradient(2px 2px at 90px 40px, #fff, transparent),
++       radial-gradient(2px 2px at 130px 100px, #fff, transparent),
++       radial-gradient(2px 2px at 170px 60px, #fff, transparent),
++       radial-gradient(2px 2px at 210px 90px, #fff, transparent),
++       radial-gradient(2px 2px at 250px 30px, #fff, transparent),
++       radial-gradient(2px 2px at 290px 70px, #fff, transparent);
++     background-repeat: repeat;
++     background-size: 300px 150px;
++   }
     .font-script {
       font-family: 'Great Vibes', cursive;
     }
@@ -82,7 +93,7 @@
       background-color: #d0eaff;
       background-image:
         url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), /* love heart */
-        url('https://cdn-icons-png.flaticon.com/512/616/616408.png'), /* balloon */
+        url('https://cdn-icons-png.flaticon.com/512/7334/7334113.png'), /* star */
         url('https://cdn-icons-png.flaticon.com/512/833/833472.png'); /* love heart */
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: 20% 15%, 80% 75%, 50% 50%;
@@ -98,7 +109,7 @@
       background-color: #f0f8ff;
       background-image:
         url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), /* love heart */
-        url('https://cdn-icons-png.flaticon.com/512/616/616408.png'); /* balloon */
+        url('https://cdn-icons-png.flaticon.com/512/616/616408.png'); /* star */
       background-repeat: no-repeat, no-repeat;
       background-position: 25% 25%, 75% 75%;
       background-size: 50px 50px, 60px 60px;
@@ -114,10 +125,10 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+      background-image: none;
       background-repeat: repeat;
       background-size: 120px 120px;
-      opacity: 0.12;
+      opacity: 0;
       border-radius: 1.5rem;
       z-index: -1;
       filter: brightness(1.1) contrast(0.9);
@@ -223,7 +234,7 @@
 
    <!-- Page 2: Ucapan Selamat Ulang Tahun dan Permintaan Maaf -->
    <section class="hidden min-h-screen flex flex-col justify-center items-center px-8 text-center rounded-3xl shadow-lg relative overflow-hidden mt-10 sticker-bg-2" id="page2">
-    <div aria-hidden="true" class="letter-overlay" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); opacity: 0.12;"></div>
+    <div aria-hidden="true" class="letter-overlay" style="opacity: 0;"></div>
     <h2 class="text-4xl font-script text-cyan-900 mb-6 drop-shadow-md select-none animate-fadeIn">
      Selamat Ulang Tahun, Reny!
     </h2>
@@ -238,7 +249,7 @@
 
    <!-- Page 3: Halaman Kenangan dengan 10 Foto -->
    <section class="hidden min-h-screen flex flex-col items-center px-6 py-10 rounded-3xl shadow-lg mt-10 sticker-bg-3" id="page3">
-    <div aria-hidden="true" class="letter-overlay" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); opacity: 0.14;"></div>
+    <div aria-hidden="true" class="letter-overlay" style="opacity: 0;"></div>
     <h3 class="text-4xl font-script text-yellow-900 mb-10 select-none drop-shadow-md animate-fadeIn">
      Halaman Kenangan
     </h3>
